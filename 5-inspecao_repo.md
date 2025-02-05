@@ -50,6 +50,13 @@ git diff <commit1> <commit2>
 ```bash
 git diff branch1 branch2
 ```
+
+- Comparar o commit atual com o anterior
+
+```bash
+git diff HEAD^
+```
+
 **Como comparar as diferenças entre o repositório local e remoto no Git**
 
 Para comparar as diferenças entre o repositório local e o remoto, você pode usar o seguinte comando:
