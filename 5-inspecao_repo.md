@@ -19,6 +19,7 @@ git show 5813f456
 
 Este comando exibe o commit com hash 5813f456, mostrando as alterações realizadas e os metadado.
 
+***Obs:*** O comando **git log** exibe uma lista de commits
 ## 2. git diff
 O comando git diff compara diferentes estados do repositório, como:
 - Alterações entre o diretório de trabalho e o índice (staging area).
@@ -49,6 +50,23 @@ git diff <commit1> <commit2>
 ```bash
 git diff branch1 branch2
 ```
+**Como comparar as diferenças entre o repositório local e remoto no Git**
+
+Para comparar as diferenças entre o repositório local e o remoto, você pode usar o seguinte comando:
+
+```bash
+git fetch
+git diff origin/<branch>
+```
+**Explicação dos comandos:**
+
+1. git fetch:
+- Este comando atualiza as referências do repositório remoto no seu repositório local, mas não faz o merge ou altera os arquivos no seu diretório de trabalho. Ele baixa as informações mais recentes do repositório remoto, como commits e branches.
+
+2.git diff origin/branch:
+- Após o git fetch, este comando compara a branch local com a branch remota correspondente (substitua <branch> pelo nome da branch, como main ou master).
+- Ele mostra as diferenças entre o estado atual do repositório local e o remoto.
+
 
 ## 3. git shortlog
 O comando git shortlog gera um resumo do histórico de commits, agrupando-os por autor. É útil para visualizar contribuições em projetos colaborativos.
